@@ -1,16 +1,15 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
-import EmployeeTable from './EmployeeTable';
 
 const EmployeeSearch = () => {
 
-    const {search} = useContext(AppContext);
+    const { search } = useContext(AppContext);
     let [searching, setSearching] = search;
     const handleChange = e => {
-        setSearching( searching = e.target.value);
+        setSearching(searching = e.target.value);
     };
 
-    return(
+    return (
         <React.Fragment>
             <header>
                 <h1>Employee Lookup</h1>
@@ -19,7 +18,7 @@ const EmployeeSearch = () => {
             <section className="filterBar">
                 <input
                     type="text"
-                    placeholder="Filter by worker name..."
+                    placeholder="Filter by employee name..."
                     value={searching}
                     onChange={handleChange}
                 />
