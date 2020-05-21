@@ -35,7 +35,7 @@ const EmployeeTable = () => {
                         <React.Fragment>
                             {/* Grabs all employee data and filters it for searchfield value */}
                             {employeeDatas.filter((employee) => {
-                                let name = employee.name.first + ' ' + employee.anme.last;
+                                let name = employee.name.first + ' ' + employee.name.last;
                                 return name.toLowerCase().includes(search[0].toLowerCase())
                             })
                                 /* Sorts the data for alphabetical forwards for backwards */
@@ -51,7 +51,7 @@ const EmployeeTable = () => {
                                 .map((employee, index) => (
                                     <tr className="employee" key={index}>
                                         <td className="employee-img"><img src={employee.picture.medium} alt="" /></td>
-                                        <td className="employee-name">{employee.name.first + ' ' + employee.anme.last}</td>
+                                        <td className="employee-name">{employee.name.first + ' ' + employee.name.last}</td>
                                         <td className="employee-email">{employee.email}</td>
                                         <td className="employee-age">{employee.dob.age}</td>
                                         <td className="employee-location">{employee.location.state}</td>
